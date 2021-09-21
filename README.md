@@ -82,7 +82,9 @@ pluralReactFundamentals
 				React Rule: All React Components must act like pure functions w.r.t there props.
 					Which mean for a given props object output should always be same, so Component does not needs to be rerendered										
 			
-	13. Prefered way to define React Component is using Function sytax seen so far
+	13. Class
+	
+		Prefered way to define React Component is using Function sytax seen so far
 			React Component --> JS script Funtion from props object--> To a React Element
 		
 		Another way is define React Component is via ES6 JS class
@@ -102,4 +104,12 @@ pluralReactFundamentals
 			, document.getElementById('root')
 			);
 			
+	14. Component LifeCycle
+		
+			Mounting:
+				Constructor --> componentWillMount --> render --> componentDidMount
 			
+			Updating:
+				componentWillReciveProps --> shouldComponentUpdate --> componentWillUpdate --> render --> componentDidUpdate
+				
+	
