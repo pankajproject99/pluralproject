@@ -31,5 +31,10 @@ pluralReactFundamentals
 																				And its String representation of Time
 				document.getElementById('root')							--> Second Argument is DOM element, React Component will be inserted into this DOM element.
 			);
+	9. Project name as Author Quiz 
+			New App --> using create app
+			BootStrap --> will be used for Styling
+			Components --> To maintain root
+	10. 
 			
 			
