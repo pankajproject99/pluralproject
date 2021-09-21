@@ -1,3 +1,4 @@
+<h1>pluralReactFundamentals</h1>
 pluralReactFundamentals
 	REACT perform 2 task rendering and Event
 	1. npm install -g create-react-app
@@ -49,6 +50,10 @@ pluralReactFundamentals
 					Check in Chrome Developer Tools --> Click on Element with Arrow --> Styles(will show bootstrap.min.css
 	11. Setup AuthorQuiz
 			Rename App.js to AuthorQuiz.js or Add
+			Make index.js to point AuthorQuiz.js instead of App
+			
+	
+			
 			
 			
 			
