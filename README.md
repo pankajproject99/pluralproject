@@ -173,3 +173,50 @@ pluralReactFundamentals
 				, document.getElementById('root')
 				);
 			
+	18. Testing Component
+			React should not have business logic. So not high value testing.
+			Functions are easy testing
+			
+			create-react-app uses Jest as testing framework
+				https://jestjs.io/
+				
+				npm test --> Command to test
+
+				Sample
+				describe("When setting up testing",()=> {
+					it("should fail", ()=> {
+						expect(1+1).toBe(3);
+					});
+				})
+
+
+				Simple Test for Hello Click
+					import React from "react";
+					import { mockComponent } from "react-dom/test-utils";
+
+					function Hello(props){
+						return <h1>Hello at {props.now}</h1>
+					}
+
+					describe("When testing directly",()=> {
+
+						beforeAll(()=> {
+							result= Hello({now: moment.toISOString()});
+						});
+
+						it("return a value", ()=> {
+							expect(result).not.toBeNull();
+						});
+
+						it("is a h1", ()=> {
+							expect(result.type).toBe("h1");
+						});
+
+						it("has children", ()=> {
+							expect(result.props.children).toBeTruthy();
+						});
+
+					})
+
+				
+					
