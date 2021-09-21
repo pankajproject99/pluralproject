@@ -9,6 +9,12 @@ pluralReactFundamentals
 		Wrap it as Function and call the render itself
 		Wored when clicked on statment
 			Wrap with render so when model changes it will render again
-			
+	6. Application with Games with choosing the answer answer for a Image
+	7. Component: Function return JSX and has combination of HTML aand JSX
+			Since Function has to return JSX it has to be compiled, so JSX is converted to JS
+				eg. function Hello(props) {
+						return <h1>Hello at {props.now}</h1>;
+					)
+					Here model:data:props is input to function
 	
 	
