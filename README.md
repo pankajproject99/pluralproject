@@ -73,7 +73,7 @@ pluralReactFundamentals
 				}
 				
 				ReactDOM.render(<Sum a={4} b={2} />		--> Sum must have staring with capital letter. Attributes are passed as SINGLE OBJECT. 
-				, document.getElementById('root'));
+				, document.getElementById('root')
 				);
 				
 				Output:
@@ -82,7 +82,24 @@ pluralReactFundamentals
 				React Rule: All React Components must act like pure functions w.r.t there props.
 					Which mean for a given props object output should always be same, so Component does not needs to be rerendered										
 			
-	13. 
+	13. Prefered way to define React Component is using Function sytax seen so far
+			React Component --> JS script Funtion from props object--> To a React Element
+		
+		Another way is define React Component is via ES6 JS class
+			Minimum it should extend React.Component and render method
+		
+		Imp: if possible use function
 			
+			class Sum extends React.Component{
+				render() {
+					return <h1>
+						{props.a} + {props.b} = {props.a + props.b}
+					</h1>;
+				}
+			}
+			
+			ReactDOM.render(<Sum a={4} b={2} />	
+			, document.getElementById('root')
+			);
 			
 			
