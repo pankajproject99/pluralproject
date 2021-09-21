@@ -35,6 +35,18 @@ pluralReactFundamentals
 			New App --> using create app
 			BootStrap --> will be used for Styling
 			Components --> To maintain root
-	10. 
+			
+			https://codepen.io/bradleyboy/pen/OPBpGw --> Can be used for running ReactJs directly
+	10. BootStrap
+			https://getbootstrap.com/
+				jsDelivr
+					<!-- CSS only -->
+					<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+					Go to Link: https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css and copy the file(bootstrap.min.css) in source directly
+					Now we have it at local storage
+					Now we need to include it to our project and build processes so styles are applied 
+				
+					Check in Chrome Developer Tools --> Click on Element with Arrow --> Styles(will show bootstrap.min.css
+			
 			
 			
