@@ -112,4 +112,27 @@ pluralReactFundamentals
 			Updating:
 				componentWillReciveProps --> shouldComponentUpdate --> componentWillUpdate --> render --> componentDidUpdate
 				
-	
+	15. State
+			Are local and mutable.
+			Having Data within Component which can change increases complexity and limits the composibility of component
+			Try to avoid using State
+			
+			eg. Earlier example on increment Click, we can move the OnClick to same Class so it becomes self contained
+			
+				class ClickCounter extends React Component{
+					constructor(props){
+						super(props);
+						this.state = {click:0};
+					}
+					
+					render(){
+						return <div onClick={() =>
+							{ this.setState({clicks: this.state.clicks +1});}}>		--> Important to use setState instead of direct change, so that react knows component has changed and needs to be rendered.
+							This div has been clicked (this.state.clicks) times
+							</div>
+						
+					}
+				}
+			Its usually better to maneged state at application level, so avoid class and state
+				
+	16.
