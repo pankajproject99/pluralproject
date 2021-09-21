@@ -47,6 +47,8 @@ pluralReactFundamentals
 					Now we need to include it to our project and build processes so styles are applied 
 				
 					Check in Chrome Developer Tools --> Click on Element with Arrow --> Styles(will show bootstrap.min.css
+	11. Setup AuthorQuiz
+			Rename App.js to AuthorQuiz.js or Add
 			
 			
 			

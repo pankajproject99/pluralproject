@@ -1,18 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import AuthorQuiz from './AuthorQuiz.js';
 import reportWebVitals from './reportWebVitals';
 
-let model = { clicks: 0 };
 
-function render() {
-  ReactDOM.render(<App
-    clicks={model.clicks}
-    onClick={() => { model.clicks += 1; render(); }} />
+  ReactDOM.render(<AuthorQuiz />
     , document.getElementById('root'));
-}
-render();
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
