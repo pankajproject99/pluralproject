@@ -4,9 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+let model = {clicks:0};
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App 
+      clicks={model.clicks}
+      onClick={()=>{model.clicks +=1}}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
