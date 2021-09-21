@@ -155,4 +155,21 @@ pluralReactFundamentals
 				, document.getElementById('root')
 				);
 				
-	17. 
+	17. TypeScript(Microsoft) and Flow
+			Both are ways where they are trying to make it type sensitive
+				
+				interface Sum.Props = {
+					a: number;
+					b: number;
+				}
+
+				function Sum(props: SumProps) {				
+					return(
+						<h1>{props.a} + {props.b} = {props.a + props.b}</h1>
+					);
+				}
+				
+				ReactDOM.render(<Sum a={4} b={2} />
+				, document.getElementById('root')
+				);
+			
