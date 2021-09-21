@@ -7,6 +7,8 @@ pluralReactFundamentals
 	4. Simple model object
 	5. Event: model object to check number of click count
 		Wrap it as Function and call the render itself
-		: Didnt worked
+		Wored when clicked on statment
+			Wrap with render so when model changes it will render again
+			
 	
 	
