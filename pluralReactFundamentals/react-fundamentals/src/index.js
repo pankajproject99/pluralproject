@@ -4,16 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-let model = {clicks:0};
+let model = { clicks: 0 };
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App 
-      clicks={model.clicks}
-      onClick={()=>{model.clicks +=1}}/>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function render() {
+  ReactDOM.render(<App
+    clicks={model.clicks}
+    onClick={() => { model.clicks += 1; render(); }} />
+    , document.getElementById('root'));
+}
+
+render();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
