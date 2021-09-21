@@ -59,8 +59,30 @@ pluralReactFundamentals
 			Rename App.js to AuthorQuiz.js or Add
 			Make index.js to point AuthorQuiz.js instead of App
 			
-	
+	12. JSX can represent 2 types of elements
+			--> 1. DOM Tags are represented in lower case, attribute passed to these elements are set on rendered DOM nodes, eg render div with id attribute with value mydiv as per JSX
+					eg
+						ReactDOM.render(<div id="mydiv"></div> />				
+						, document.getElementById('root'));
+			--> 2. User defined elements eg Sum must have staring with capital letter.
+				
+				function Sum(props) {					--> Identified props is an object containing 2 properties with respective values. Given the properties Sum Component can render its output
+					return(
+						<h1>{props.a} + {props.b} = {props.a + props.b}</h1>
+					);
+				}
+				
+				ReactDOM.render(<Sum a={4} b={2} />		--> Sum must have staring with capital letter. Attributes are passed as SINGLE OBJECT. 
+				, document.getElementById('root'));
+				);
+				
+				Output:
+					4 + 2 =6
+					
+				React Rule: All React Components must act like pure functions w.r.t there props.
+					Which mean for a given props object output should always be same, so Component does not needs to be rerendered										
 			
+	13. 
 			
 			
 			
