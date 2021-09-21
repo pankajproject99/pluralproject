@@ -225,3 +225,22 @@ pluralReactFundamentals
 							ReactDOM.render(<Hello now={moment.toISOString()}/>,div);
 						});
 					});
+		20. Testing with Enzyme
+					
+				Install enzyme and its adaptar(More soficated testing library)
+					npm i --save-dev enzyme enzyme-adapter-react-16
+				Import shallow from enzyme module
+				
+					Enzyme.configure({ adapter: new Adapter() });
+
+					describe("when Testing with Enzyme", () => {
+						it("renders a hi", () => {
+							const wrapper = shallow(<Hello now={moment.toISOString()} />);
+							expect(wrapper.find("h1").length).toBe(1);
+						});
+
+						it("contains Hello at 202-05-08T14:00:00.000Z", () =>{
+							const wrapper = shallow(<Hello now={moment.toISOString()} />);
+							expect(wrapper.contains(<h1>Hello at 202-05-08T14:00:00.000Z</h1>)).toBe(true);
+						});
+					});
