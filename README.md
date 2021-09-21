@@ -218,5 +218,10 @@ pluralReactFundamentals
 
 					})
 
-				
-					
+		19. Testing DOM		
+					describe("When testing with ReactDOM", ()=>{
+						it("renders without crashing",()=>{
+							const div = document.createElement("div");
+							ReactDOM.render(<Hello now={moment.toISOString()}/>,div);
+						});
+					});
