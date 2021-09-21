@@ -17,4 +17,19 @@ pluralReactFundamentals
 					)
 					Here model:data:props is input to function
 	
-	
+	8. Sample Code Explanation
+			import ReactDom from 'react-dom'; 							--> To get access to render function
+			import React from 'react';									--> To get react model
+			
+			
+			function Hello(props){
+				return <h1>Hello at {props.now}</h1>;
+			}
+			
+			ReactDOM.render(<Hello now={new Date.toISOString()} />,		--> Imp: We can use render fuction from ReacDOM Model, to render React Component into a DOM element
+																		--> First part says we want to render Hello Component, now is value which we supply to Hello Component
+																				And its String representation of Time
+				document.getElementById('root')							--> Second Argument is DOM element, React Component will be inserted into this DOM element.
+			);
+			
+			
