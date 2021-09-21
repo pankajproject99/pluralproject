@@ -135,4 +135,24 @@ pluralReactFundamentals
 				}
 			Its usually better to maneged state at application level, so avoid class and state
 				
-	16.
+	16. Prop Validation
+			Validatin of types for variable or props, By Default React Props are not Type sensitive
+				
+				import PropTypes from 'prop-types';		--> Separate packge, to be needs to be downloaded
+				
+				function Sum(props) {				
+					return(
+						<h1>{props.a} + {props.b} = {props.a + props.b}</h1>
+					);
+				}
+				
+				Sum.propTypes = {
+					a: PropTypes.number.isRquired,	--> prop type validation when its passed, plus its required.
+					b: PropTypes.number.isRquired
+				}
+				
+				ReactDOM.render(<Sum a={4} b={2} />
+				, document.getElementById('root')
+				);
+				
+	17. 
