@@ -388,10 +388,48 @@ pluralReactFundamentals
 				cons el = <Clicker handleClick={(1) => {log(1);)) />;						--> handleClick receives a letter A, and logs the letter
 				
 					
-			
+				From : https://codepen.io/bradleyboy/pen/OPBpGw?editors=0011
+					
+						class Clicker extends React.Component {
+						  render() {
+							return <div>
+							  <button onClick={(e) => {this.props.handleClick('A')}}>A</button>
+							  <button onClick={(e) => {this.props.handleClick('B')}}>B</button>
+							  <button onClick={(e) => {this.props.handleClick('C')}}>C</button>
+							</div>;
+						  }
+						}
+
+						/*
+						 * Render the above component into the div#app
+						 */
+						React.render(<Clicker handleClick={(letter) =>{console.log(`${letter} clicked`);}}/>, document.getElementById('app'));
 				
 				
 				
+		26. React Data Flow
+				REact has Tree structure
+					Parent component pass props to child components
+					Child components use function as props to pass values to parent
+					
+					
+						class ClickyButtons extends React.Component {
+						  render() {
+							const makeBUtton = v => <button key={v} id={v} onClick={event =>
+								this.props.onSelection(event.target.id)}>{v}</button>;
+							return <div>
+								{_.range(1,this.props.numberofButtons +1).map(makeButton)}
+							</div>;
+						  }
+						}
+
+						/*
+						 * Render the above component into the div#app
+						 */
+						React.render(<ClickyButtons numberofButtons={10} onSelection={console.log}/>, document.getElementById('app'));
+		
+		27. JSX and HTML
 				
+
 				
 						
