@@ -616,5 +616,16 @@ pluralReactFundamentals
 						ReactDOM.render(<AuthorQuiz {...state} />						--> using expant form so multiple object can be send, further proof
 						  , document.getElementById('root'));
 						  
-						  
+				Step7. Move input to expand form
+						
+						function AuthorQuiz ({turnData}) {
+							return (
+							  <div className="container-fluid">
+								  <Hero/>
+								  <Turn {...turnData}/>									--> <Turn author={turnData.author} books={turnData.books}/>
+								  <Continue/>
+								  <Footer />
+							  </div>
+							);
+						  }
 						  
