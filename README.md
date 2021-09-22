@@ -643,4 +643,41 @@ pluralReactFundamentals
 							.authorimage {
 							  max-height: 100%;
 							}
+					
+				Step9: List of books is rendered as list of paragraph, lets make it Compnent and clickable
+							
+							function Turn({author,books}){
+							  return(
+								<div className="row turn" style={{backgroundColor: "white"}}>
+								  <div className="col-4 offset-1">
+									<img src={author.imageUrl} className="authorimage" alt="Author"></img>
+								  </div>
+								  <div className="col-6">
+									{books.map((title)=><Book title={title} key={title}/>)}
+								  </div>
+								</div>
+
+							  );
+							}
 						  
+							function Book({title}){
+							  return(<div className="answer">
+								<h4>{title}</h4>
+							  </div>);
+							}
+							
+							App.css
+								.answer {
+								  background-color: #F0F7FD;
+								  border-color: #D0E3F0;
+								  margin-bottom: 20px;
+								  padding: 15px 30px 15px 15px;
+								  border-left: 5px solid #D0E3F0;	--> On left side Border
+								  cursor: pointer;					--> Change mouse pointer
+								}
+
+								.answer:hover{
+								  background-color: #D0E3F0;		--> Change color to same which is there on left border
+								}
+							
+							
