@@ -244,3 +244,5 @@ pluralReactFundamentals
 							expect(wrapper.contains(<h1>Hello at 202-05-08T14:00:00.000Z</h1>)).toBe(true);
 						});
 					});
+		21. Component
+				
