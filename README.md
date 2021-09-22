@@ -377,7 +377,17 @@ pluralReactFundamentals
 				const props = {a: 4, b:2};
 				const element = <Sum {...props} />
 				
+		25. Events
+				Props are also prefered way to send data out of Component.
+				This is done for event.
 				
+				function Clicker({ handleClick }){
+					return <button onCLick={(e) => {handleClick('A');}}>A</button>			--> handleClick('A') Specify function as prop and call that function, pass the data as function argument
+				}
+				
+				cons el = <Clicker handleClick={(1) => {log(1);)) />;						--> handleClick receives a letter A, and logs the letter
+				
+					
 			
 				
 				
