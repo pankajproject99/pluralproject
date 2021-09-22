@@ -4,8 +4,23 @@ import './index.css';
 import AuthorQuiz from './AuthorQuiz.js';
 import reportWebVitals from './reportWebVitals';
 
+const authors = [
+  {
+    name: 'Mark Twin',
+    imageUrl: 'images/authors/marktwain.jpg',
+    imageSource: 'Wikimedia Commons',
+    books: ['The Adventures of Huckleberry Finn']
+  }
+];
 
-ReactDOM.render(<AuthorQuiz />
+const state = {
+  turnData: {
+    author: authors[0],
+    books: authors[0].books
+  }
+};
+
+ReactDOM.render(<AuthorQuiz {...state} />
   , document.getElementById('root'));
 
 

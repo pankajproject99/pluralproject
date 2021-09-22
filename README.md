@@ -566,3 +566,55 @@ pluralReactFundamentals
 
 				  );
 				}
+				
+				Step6: 
+					Setup Turn to accept image and book title
+					
+					AuthorQuiz.js
+						function Turn({author,books}){
+						  return(
+							<div className="row turn" style={{backgroundColor: "white"}}>
+							  <div className="col-4 offset-1">
+								<img src={author.imageUrl} className="authorimage" alt="Author"></img>
+							  </div>
+							  <div className="col-6">
+								{books.map((title)=><p>{title}</p>)}
+							  </div>
+							</div>
+
+						  );
+						}
+						
+						function AuthorQuiz ({turnData}) {													--> Receive TurnData from index and give it to Turn
+							return (
+							  <div className="container-fluid">
+								  <Hero/>
+								  <Turn author={turnData.author} books={turnData.books}/>
+								  <Continue/>
+								  <Footer />
+							  </div>
+							);
+						  }
+						  
+					index.js
+						const authors = [
+							  {
+								name: 'Mark Twin',
+								imageUrl: 'images/authors/marktwain.jpg',				--> Copy image file to this location
+								imageSource: 'Wikimedia Commons',
+								books: ['The Adventures of Huckleberry Finn']
+							  }
+							];
+							
+						const state = {
+						  turnData: {													--> Since multiple objects needs to be return, lets make a Object as TurnData
+							author: authors[0],
+							books: authors[0].books
+						  }
+						};
+
+						ReactDOM.render(<AuthorQuiz {...state} />						--> using expant form so multiple object can be send, further proof
+						  , document.getElementById('root'));
+						  
+						  
+						  

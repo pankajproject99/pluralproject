@@ -12,11 +12,14 @@ function Hero(){
   </div>);
 }
 
-function Turn(){
+function Turn({author,books}){
   return(
     <div className="row turn" style={{backgroundColor: "white"}}>
       <div className="col-4 offset-1">
         <img src={author.imageUrl} className="authorimage" alt="Author"></img>
+      </div>
+      <div className="col-6">
+        {books.map((title)=><p>{title}</p>)}
       </div>
     </div>
 
@@ -40,17 +43,16 @@ function Footer(){
   );
 }
 
-class AuthorQuiz extends Component {
-  render() {
+function AuthorQuiz ({turnData}) {
     return (
       <div className="container-fluid">
           <Hero/>
-          <Turn/>
+          <Turn author={turnData.author} books={turnData.books}/>
           <Continue/>
           <Footer />
       </div>
     );
   }
-}
+
 
 export default AuthorQuiz;
