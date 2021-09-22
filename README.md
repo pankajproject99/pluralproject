@@ -324,5 +324,43 @@ pluralReactFundamentals
 					});
 
 					
+		22. JSX
+				<> supports xml like syntax
+				JSX is converted into JS function call(Babel is used)
+				JSX is syntax included in line in JS files
+				
+				React Element in 				
+					JSX format
+						<Sum a={4} b={3} />
+					
+					JS format
+						React.createElement(			--> Starts with React. Each JSX is convereted into create Element
+							Sum,						
+							{a:4, b:3},					--> Props are collected in JS object, 2 parameter
+							null						--> Children is passed as third parameter
+						)
+				When a Component is combined wwith props its called React element
+				
+				
+				React Element in 				
+					JSX format
+						<h1>
+							<Sum a={4} b={3} />
+						</h1>
+				
+					JS Format
+						React.createElement(			
+							'h1',							--> First parameter, build in Components those which map to html elements are taken as String
+							null							--> Second Paramter, no props
+							React.createElement(			--> Third Parameter, Child Component of h1 element
+								Sum,						
+								{a:4, b:3},					
+								null
+							)
+						)
+						
+				
+				
+				
 				
 						
