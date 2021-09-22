@@ -372,7 +372,13 @@ pluralReactFundamentals
 				Can also be literal string values, no curly brakcets
 					<Hello now="Literal string value" />
 					
+		24.	Spread Attributes in JSX
 				
+				const props = {a: 4, b:2};
+				const element = <Sum {...props} />
+				
+				
+			
 				
 				
 				
