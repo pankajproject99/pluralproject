@@ -358,7 +358,22 @@ pluralReactFundamentals
 								null
 							)
 						)
-						
+		
+		23. Props in JSX
+				<Hello now={bew Date().toISOString()} />
+				
+				JSX Attributes become componenet props
+				
+					now is Attribute in JSX and Component Props in react
+					Value assigned to now is JSX attribute expression, delimited by curly brackets
+					Exprerssion inside curly brackets can be any JS valid expresion
+					During render JS is evelauted and value is placed.
+					
+				Can also be literal string values, no curly brakcets
+					<Hello now="Literal string value" />
+					
+				
+				
 				
 				
 				
