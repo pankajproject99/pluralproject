@@ -548,3 +548,21 @@ pluralReactFundamentals
 					  </div>
 					  );
 					}
+					
+				Step5: 
+					function Turn(){
+					  return(
+						<div className="row turn" style={{backgroundColor: "white"}}></div>	-
+					  );
+					}
+				
+				function Turn(){
+				  return(
+					<div className="row turn" style={{backgroundColor: "white"}}>					--> trun.css will be added later, style is used for background
+					  <div className="col-4 offset-1">												--> out of 12 columns 5 isused now
+						<img src={author.imageUrl} className="authorimage" alt="Author"></img>		--> src of image will come from props
+					  </div>
+					</div>
+
+				  );
+				}
