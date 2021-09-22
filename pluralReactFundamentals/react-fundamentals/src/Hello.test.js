@@ -2,6 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Enzyme, { shallow }  from "enzyme";
 import Adapter from 'enzyme-adapter-react-16';
+// import moment from 'moment';
+
+describe("When setting up testing",()=> {
+    it("should paass", ()=> {
+        expect(1+1).toBe(2);
+    });
+})
 
 function Hello(props){
     return <h1>Hello at {props.now}</h1>
@@ -40,5 +47,10 @@ describe("when Testing with Enzyme", () => {
     it("renders a hi", () => {
         const wrapper = shallow(<Hello now={moment.toISOString()} />);
         expect(wrapper.find("h1").length).toBe(1);
+    });
+
+    it("contains Hello at 202-05-08T14:00:00.000Z", () =>{
+        const wrapper = shallow(<Hello now={moment.toISOString()} />);
+        expect(wrapper.contains(<h1>Hello at 202-05-08T14:00:00.000Z</h1>)).toBe(true);
     });
 });

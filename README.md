@@ -309,7 +309,20 @@ pluralReactFundamentals
 							expect(wrapper.contains(<h1>Hello at 202-05-08T14:00:00.000Z</h1>)).toBe(true);
 						});
 					});
-		21. 
+		21. Testing AuthorQuiz able to render
+				By checking if there is div(Test:Passed)
+					import { render, screen } from '@testing-library/react';
+					import React from 'react';
+					import ReactDOM  from 'react-dom';
+					import AuthorQuiz from './AuthorQuiz';
+
+					describe("Autho Quiz",() => {
+					  it("renders without crashing",()=>{
+						  const div = document.createElement("div");
+						  ReactDOM.render(<AuthorQuiz />, div);
+					  });
+					});
+
 					
 				
 						
