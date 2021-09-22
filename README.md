@@ -629,3 +629,18 @@ pluralReactFundamentals
 							);
 						  }
 						  
+				Step8: Add styling for App.css or AuthorQuiz.js
+						App.css
+							.turn >div {
+							  height: 400px;
+							}
+
+							.turn {
+							  padding-top: 20px;
+							  padding-bottom: 20px;
+							}
+
+							.authorimage {
+							  max-height: 100%;
+							}
+						  
