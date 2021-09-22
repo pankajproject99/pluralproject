@@ -537,4 +537,14 @@ pluralReactFundamentals
 
 				Step4: 
 					
-					
+					function Footer(){
+					  return(<div id="footer" className="row">				--> Boot strap row
+						<div className="col-12">							--> Column lenght 12
+						  <p className="text-muted credit">					--> Color is less prominent that primary colour(https://www.w3schools.com/bootstrap/bootstrap_ref_css_helpers.asp)
+							All images are from <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikemedia Commons</a> and are in the public domain
+																			--> <a tag attribute is href, used for page link
+						  </p>
+						</div>
+					  </div>
+					  );
+					}
