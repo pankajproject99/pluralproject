@@ -679,5 +679,21 @@ pluralReactFundamentals
 								.answer:hover{
 								  background-color: #D0E3F0;		--> Change color to same which is there on left border
 								}
+
+				Step10: Add more books
+							const authors = [
+							  {
+								name: 'Mark Twin',
+								imageUrl: 'images/authors/marktwain.jpg',
+								imageSource: 'Wikimedia Commons',
+								books: [
+								  'The Adventures of Huckleberry Finn',
+								  'Life on the Mississipi',				--> Added more books
+								  'Roughing on old'  ]
+							  }
+							];
+							
+							
+							
 							
 							

@@ -9,7 +9,10 @@ const authors = [
     name: 'Mark Twin',
     imageUrl: 'images/authors/marktwain.jpg',
     imageSource: 'Wikimedia Commons',
-    books: ['The Adventures of Huckleberry Finn']
+    books: [
+      'The Adventures of Huckleberry Finn',
+      'Life on the Mississipi',
+      'Roughing on old'  ]
   }
 ];
 
