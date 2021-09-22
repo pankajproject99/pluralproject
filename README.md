@@ -24,8 +24,16 @@ pluralReactFundamentals
 						return <h1>Hello at {props.now}</h1>;
 					)
 					Here model:data:props is input to function
+			
+			Component
+				DOM is web page and has elements.
+				Each component corresponds to an element in DOM.
+					Component is responsibile for rendering the the content of that element.
+				
+				Nested Component: is called Composing componenet
+					Nested Component corresponds to nested DOM noes.
 	
-	8. Sample Code Explanation
+	8. Sample Code Explanation(Rendering a Component)
 			import ReactDom from 'react-dom'; 							--> To get access to render function
 			import React from 'react';									--> To get react model
 			
@@ -80,7 +88,13 @@ pluralReactFundamentals
 					4 + 2 =6
 					
 				React Rule: All React Components must act like pure functions w.r.t there props.
-					Which mean for a given props object output should always be same, so Component does not needs to be rerendered										
+					Which mean for a given props object output should always be same, so Component does not needs to be rerendered	
+				
+				JSX is not necessary for react. 
+				JSX is a special extension that allows us to place HTML elements right inside JavaScript code without using additional methods like createElement().
+				Check same code without JSX
+					https://babeljs.io/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.6&spec=false&loose=false&code_lz=MYewdgzgLgBAggBwTAvDAFASlQPhgbxgHoioALAQ1gEsIYKx6AnJkAdxgDMBXMYKauABQMGKEiwA5kwCmMgWEmoYAcgASMgDaaQMAGK9-gxgGEQAWwTgZYKAEIVAbhEiYsqNyaMAPBooATTWowGRgANwpNbhkUfGk5BUkAX2IcZyTnGCFxaBg_QODQtHRCCKjQpOwUHFdvMgBGHHwy6KTvIga0lxkADysmWH8ZTgpuTVhEBEcgA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=env%2Creact%2Cstage-2&prettier=false&targets=&version=7.15.7&externalPlugins=&assumptions=%7B%7D
+				
 			
 	13. Class
 	
@@ -103,6 +117,57 @@ pluralReactFundamentals
 			ReactDOM.render(<Sum a={4} b={2} />	
 			, document.getElementById('root')
 			);
+			
+			When to use function, class and Arrow Function
+				If you work with global scope and Object.prototype properties use function.
+					FUnction dont have state, so they are called stateless function. With Hook Function also has state, plus more features.
+					Function just takes props and return react element.
+						They dont manage state, dont have life cycle
+				If you work with object constructors use class.
+					To use props, use this.props in class
+					“stateful” components, they additional offer state and lifecycle.
+					Instide constructure use this.state otherwise anywhere else use setState
+				If you face any other situation use arrow function.
+				
+				Hook provides for
+					setState --> useState
+					lifecycle --. useEffect which has componentDidMount, componentDidUpdate, and componentWillUnmount
+					
+					Function component look elegent as compared to Class component
+					
+					https://flatlogic.com/blog/functional-components-vs-class-components-in-react-js/
+					HOOK:
+						const FunctionalComponent = () => {
+						const [count, setCount] = React.useState(0);		--> using seState, value is used only on first render
+						return (
+						   <div>
+							 <p>count: {count}</p>
+							 <button onClick={() => setCount(count + 1)}>Click</button>
+						   </div>
+						 );
+						};
+						
+					CLASS:(More Line of codes)
+						
+						class ClassComponent extends React.Component {
+						 constructor(props) {
+						   super(props);
+						   this.state = {
+							 count: 0
+						   };
+						 }
+						 
+						 render() {
+						   return (
+							 <div>
+							   <p>count: {this.state.count} times</p>
+							   <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+								 Click
+							   </button>
+							 </div>
+						   );
+						 }
+						}
 			
 	14. Component LifeCycle
 		
@@ -244,5 +309,7 @@ pluralReactFundamentals
 							expect(wrapper.contains(<h1>Hello at 202-05-08T14:00:00.000Z</h1>)).toBe(true);
 						});
 					});
-		21. Component
+		21. 
+					
 				
+						
