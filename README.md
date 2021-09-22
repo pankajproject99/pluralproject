@@ -497,4 +497,44 @@ pluralReactFundamentals
 					
 				}, 2000);	
 					
-						
+		30. Author Quiz
+				
+				Step1. 
+					class AuthorQuiz extends Component {
+					  render() {
+						return (
+						  <div className="container-fluid">				--> Making div with BootStrap fluid continer
+							  <Hero/>									--> 3 continers 1, Show Picture
+							  <Turn/>									--> COmpoent for selection
+							  <Continue/>								--> COntainer for button
+						  </div>
+						);
+					  }
+					}
+					
+				Step2:
+					function Hero(){
+					  return(<div className="row">						--> BootStrap row
+						<div className="jumbotron col-10 offset-1">		--> BootStrap jumbotron(applies to sytling) column lenght 10(default12) offset from left by 1
+						  <h1>Author Quiz</h1>							--> heading
+						  <p>Select the book written by the author shown</p>	--> Paragraph
+						</div>
+					  </div>);
+					}
+				
+				Step3:
+					function Turn(){
+					  return(
+						<div></div>
+					  );
+					}
+
+					function Continue(){
+					  return(
+						<div></div>
+					  );
+					}
+
+				Step4: 
+					
+					
