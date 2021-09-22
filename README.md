@@ -430,6 +430,24 @@ pluralReactFundamentals
 		
 		27. JSX and HTML
 				
+				JSX
+					<label													--> default written in lowercase
+						htmlFor="name" className="highlight"				--> CamelCase, for and class is JS reserved words they are not used for attributes
+							style={{										--> style available but with different usage as Json object 
+								backgroundColor:"yellow"					--> Key is CamelCase and Value as String
+								}}											--> double curly so it delimits the JSX expresion and inner for JS object literals
+					>
+					Foo Bar
+					</label>
+					
+				HTML
+					<label>
+						for="name" class="highlight"
+							style="background-color:yellow"
+					>
+					Foo Bar
+					</label>
 
+					
 				
 						
