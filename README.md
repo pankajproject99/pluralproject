@@ -449,6 +449,52 @@ pluralReactFundamentals
 					</label>
 
 		28. Unescaping Content
-				
-				
+				By default its escaped to prevent cross sight and pissing
+					If you still want to use than use by __html
+					
+					function DangerContainer(props){
+						return <p> dangerouslySetInnerHTML = {{__html:props.dangerous}} />;
+					}
+					
+					ReactDOM.render(<DangerContainer dangerous="<strong>HELLO,/strong>", document.getElementById('root'));
+		
+		29. Child Exprerssion and Elements
+		
+				Can be accessed by props.children
+				Below shows whatever child component are passed to it
+			
+					function Sum({a,b}){
+						return <h1> {a} + {b} = {a+b}</h1>;
+					}
+					function COnditionalDisplay(props){
+						return <div>
+							{props.isVisible ? props.children : null}
+						</div>;
+					}
+					
+					ConditionalDisplay.propTypes = {							--> proptype
+						isVisible: PropTypes.bool.isRequired					--> Boolean and is Required
+					};
+					
+					
+					cons state = {
+						showSum: true
+					}
+					<ConditionalDisplay isVisible={state.showSum}>				--> Both Child will be shown if true
+						<h1>A <span>Sum</span> <h1>								--> Child1
+						<Sum a={4] b={2} />										--> CHild2
+					</ConditionalDisplay>
+					
+				function render(){
+					ReactDOM.render(<ConditionalDisplay isVisible={state.showSum}>
+									<h1>A <span>Sum</span></h1>
+									<Sum a={4] b={2} />	
+									</ConditionalDisplay>, document.getElementById('root'));
+			;
+				setInterval(()=>{
+					state.showSum = !state.showSum;
+					render();							--> call back in interval
+					
+				}, 2000);	
+					
 						
