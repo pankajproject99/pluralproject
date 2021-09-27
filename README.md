@@ -693,6 +693,49 @@ pluralReactFundamentals
 							  }
 							];
 							
+				Step11: Add Random for selection of Author
+						So we will use reduce technique for all Books and choose top 4 books
+						
+							function getTurnData(authors){
+							  const allBooks = authors.reduce(function(p, c, i){				--> previous, current, index
+								return p.concat(c.books);
+							  },[]);															--> Initial blank array
+							}
+						
+						For Random use librarry underscore
+							npm install underscore
+							
+							function getTurnData(authors){
+							  const allBooks = authors.reduce(function(p, c, i){
+								return p.concat(c.books);
+							  },[]);				
+							  const fourRandomeBooks = shuffle(allBooks).slice(0,4);				--> shuffle all books and take slice of 1st 4 books
+							}
+						Answer, choose one of the random value as answer
+							function getTurnData(authors){
+							  const allBooks = authors.reduce(function(p, c, i){
+								return p.concat(c.books);
+							  },[]);
+							  const fourRandomeBooks = shuffle(allBooks).slice(0,4);
+							  const answer = sample(fourRandomeBooks);								--> Sample to choose one of the value as random
+							}
+							
+							
+						Return Books and Author from selected answer
+							function getTurnData(authors){
+							  const allBooks = authors.reduce(function(p, c, i){
+								return p.concat(c.books);
+							  },[]);
+							  const fourRandomeBooks = shuffle(allBooks).slice(0,4);
+							  const answer = sample(fourRandomeBooks);
+
+							  return {
+								books: fourRandomeBooks,
+								author: authors.find((author) => 
+									author.books.some((title) => 
+									  title === answer))
+							  }
+							}
 							
 							
 							
