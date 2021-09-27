@@ -736,7 +736,13 @@ pluralReactFundamentals
 									  title === answer))
 							  }
 							}
-							
+				
+				Step12:	Image goes some time very big, so lets set formating
+						
+							.authorimage {
+							  max-height: 100%;
+							  width: 100;					--> Width as 100
+							}
 							
 							
 							
