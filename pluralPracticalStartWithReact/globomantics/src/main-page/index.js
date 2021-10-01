@@ -4,6 +4,7 @@ import logo from "./logo.svg";
 import "./main-page.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./header";
+import FeaturedHouse from "./featured-house";
 
 function App() {
   // load data
@@ -30,7 +31,9 @@ function App() {
       <div className="container">
         <Header subtitle={"Providing houses all over the world"} />
         <Switch>
-          <Route path ="/"></Route>
+          <Route path ="/">
+            <FeaturedHouse house={featuredHouse}/>
+          </Route>
         </Switch>
       </div>
     </Router>
