@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import logo from "./logo.svg";
 import "./main-page.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,6 +16,13 @@ function App() {
     };
     fetchHouses();
   }, []);
+
+let featuredHouse = {};
+if(allHouses.length){
+  const randomIndex = Math.floor(Math.random() * allHouses.length);
+  featuredHouse=allHouses[randomIndex];
+}
+
   return (
     <div className="container">
       <Header
