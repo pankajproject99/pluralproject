@@ -7,6 +7,7 @@ import Header from "./header";
 import FeaturedHouse from "./featured-house";
 import SearchResults from "../search-results";
 import HouseFilter from "./house-filter";
+import HouseFromQuery from "../house/HouseFromQuery";
 
 function App() {
   // load data
@@ -36,6 +37,9 @@ function App() {
         <Switch>
           <Route path="/searchresults/:country">
             <SearchResults allHouses={allHouses}/>
+          </Route>
+          <Route path="/house/:id">
+            <HouseFromQuery allHouses={allHouses} />
           </Route>
           <Route path ="/">
             <FeaturedHouse house={featuredHouse}/>
