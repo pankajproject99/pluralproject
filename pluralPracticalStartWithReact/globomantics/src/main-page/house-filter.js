@@ -19,7 +19,7 @@ const HouseFilter = ({ allHouses }) => {
       </div>
       <div className="col-md-4 mb-3">
         <select className="form-select" onChange={onSearchChange}>
-          {countries.map(() => (
+          {countries.map((c) => (
             <option key={c} value={c}>
               {c}
             </option>
