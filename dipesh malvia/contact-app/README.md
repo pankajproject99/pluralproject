@@ -19,7 +19,7 @@ Component
 Level1: App(will have contacts data, will be passed to ContactList as props)
 	Level2: Header("ui fixed menu")
 		Level3: Add Contact(Contact Form)(Class)("ui main")
-			Level4: Contact List("ui celled list")
+			Level4: Contact List("ui celled list")("item")
 				Level5: CardContact
 				
 5. Update Header.js with semantic ui
@@ -84,4 +84,45 @@ Level1: App(will have contacts data, will be passed to ContactList as props)
 			}
 		  ];
 
-10. 
+10. App pass props contacts to ContactList.js
+	App.js
+      <ContactList contacts={contacts}/>
+	
+	
+	
+11. Check in Console log if data is coming in ContactList as contact object
+	const ContactList = (props) => {
+		console.log(props);
+		return ( 
+			<div className="ui celled list">
+				Contact List
+			</div>
+		 );
+	}
+
+12. ContactList.js Take contacts data and create a function which will map to JSX div, to create data for each row
+		const renderContactList = props.contacts.map((contact)=>{
+			return(
+				<div className="item">
+					<div className="content">
+						<div className="header">{contact.name}</div>
+						<div>{contact.email}</div>
+					</div>
+				</div>
+			);
+		})
+
+13. ContactList.js Add icon to each row for delete
+                <i className="trash alternate outline icon"></i>		
+	
+14. Render the funtion
+    return ( 
+        <div className="ui celled list">
+            {renderContactList}
+        </div>
+     );
+	 
+	Not execute, Just reference this for now
+		{renderContactList()}
+	  
+15. 
