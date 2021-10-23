@@ -155,3 +155,5 @@ Level1: App(will have contacts data, will be passed to ContactList as props)
 		    const {id, name, email} = props.contact;
 			
 18. ContactCard.js, Add image for user
+		import user from '../images/user.jpg'
+		28:40
