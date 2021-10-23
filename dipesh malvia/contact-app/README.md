@@ -19,7 +19,7 @@ Component
 Level1: App
 	Level2: Header("ui fixed menu")
 		Level3: Add Contact(Contact Form)(Class)("ui main")
-			Level4: Contact List
+			Level4: Contact List("ui celled list")
 				Level5: CardContact
 				
 5. Update Header.js with semantic ui
@@ -56,4 +56,17 @@ Level1: App
 		}
 	
 
-7. 
+7. AddContact.js Button within form
+
+	<button className="ui button blue">Add</button>
+	
+8. ContactList.js 
+		const ContactList = () => {
+			return ( 
+				<div className="ui celled list">
+					Contact List
+				</div>
+			 );
+		}
+
+9. 
