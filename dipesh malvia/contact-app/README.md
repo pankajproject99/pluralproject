@@ -152,3 +152,6 @@ Level1: App(will have contacts data, will be passed to ContactList as props)
         style={{color:"red", marginTop:"7px"}}></i>
 		
 17. ContactCard.js, instead of calling props again and again, can mention it as constant.
+		    const {id, name, email} = props.contact;
+			
+18. ContactCard.js, Add image for user
