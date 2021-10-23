@@ -17,8 +17,8 @@ https://cdnjs.com/libraries/semantic-ui
 
 Component
 Level1: App
-	Level2: Header
-		Level3: Add Contact
+	Level2: Header("ui fixed menu")
+		Level3: Add Contact(Contact Form)(Class)("ui main")
 			Level4: Contact List
 				Level5: CardContact
 				
@@ -33,4 +33,27 @@ Level1: App
 		 );
 	}
 
-6. 		
+6. 	AddContact.js Contact form with fields
+
+		class AddContact extends React.Component {
+			render() {
+				return (
+					<div className="ui main">
+						<h2>Add Contact</h2>
+						<form className="ui form">
+							<div className="field">
+								<label>Name</label>
+								<input type="text" name="name" placeholder="Enter Name"></input>
+							</div>
+							<div className="field">
+								<label>Email</label>
+								<input type="text" name="email" placeholder="Email1"></input>
+							</div>
+						</form>
+					</div>
+				);
+			}
+		}
+	
+
+7. 
