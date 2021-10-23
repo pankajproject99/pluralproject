@@ -19,7 +19,7 @@ Component
 Level1: App(will have contacts data, will be passed to ContactList as props)
 	Level2: Header("ui fixed menu")
 		Level3: Add Contact(Contact Form)(Class)("ui main")
-			Level4: Contact List("ui celled list")("item")
+			Level4: Contact List("ui celled list")("item") (will have contacts data, each contact will be passed as props to CardContact)
 				Level5: CardContact
 				
 5. Update Header.js with semantic ui
@@ -125,4 +125,26 @@ Level1: App(will have contacts data, will be passed to ContactList as props)
 	Not execute, Just reference this for now
 		{renderContactList()}
 	  
-15. 
+15. ContactCard.js, since the list has number of rows and its repeating convert that to separete Component
+	
+	ContactList
+		const renderContactList = props.contacts.map((contact)=>{
+			return(
+				<ContactCard contact={contact} />
+			);
+		})	
+
+	ContactList
+		const ContactCard = (props) => {
+			return ( 
+				<div className="item">
+				<div className="content">
+					<div className="header">{props.contact.name}</div>
+					<div>{props.contact.email}</div>
+				</div>
+				<i className="trash alternate outline icon"></i>
+			</div>
+			 );
+		}		
+		
+16. 		
