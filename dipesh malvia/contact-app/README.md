@@ -147,4 +147,8 @@ Level1: App(will have contacts data, will be passed to ContactList as props)
 			 );
 		}		
 		
-16. 		
+16. ContactCard.js, Add inline style to delete icon
+        <i className="trash alternate outline icon"
+        style={{color:"red", marginTop:"7px"}}></i>
+		
+17. ContactCard.js, instead of calling props again and again, can mention it as constant.
