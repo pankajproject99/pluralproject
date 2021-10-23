@@ -16,7 +16,7 @@ https://cdnjs.com/libraries/semantic-ui
 4. Desing for Page
 
 Component
-Level1: App
+Level1: App(will have contacts data, will be passed to ContactList as props)
 	Level2: Header("ui fixed menu")
 		Level3: Add Contact(Contact Form)(Class)("ui main")
 			Level4: Contact List("ui celled list")
@@ -69,4 +69,19 @@ Level1: App
 			 );
 		}
 
-9. 
+9. ContactList.js need dummy data as list/array, Data will come from Apps as props 
+
+		const contacts = [
+			{
+			  id: "1",
+			  "name":"Pan",
+			  "email":"pan@gmail.com"
+			},
+			{
+			  id: "2",
+			  "name":"Rau",
+			  "email":"rau@gmail.com"
+			}
+		  ];
+
+10. 
